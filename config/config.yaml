@@ -1,0 +1,21 @@
+dataset:
+  raw_images_path: 'Datasets/Raw_Images'
+  train_ratio: 0.8
+  img_size: 640  # YOLOv8 recommended input size
+  batch_size: 8
+
+model:
+  name: 'yolov8s'  # YOLOv8 small model
+  classes: ['streak', 'star']
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+
+training:
+  epochs: 50
+  learning_rate: 0.01
+  weight_decay: 0.0005
+  device: 'cuda'
+
+evaluation:
+  save_results: True
+  save_path: 'results'
